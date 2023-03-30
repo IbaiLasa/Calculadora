@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <link rel="stylesheet" href="css/estilo.css"> -->
+    <link rel="stylesheet" href="estilo.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script src="calculadora.js"></script>
+</head>
+<body>
+    <br><input id="Display" class="display" readonly>
+    <table>
+        <tr>
+            <td><input type="button" class="boton_sel" value="1" onclick="Display(1)"></td>
+            <td><input type="button" class="boton_sel" value="2" onclick="Display(2)"></td>
+            <td><input type="button" class="boton_sel" value="3" onclick="Display(3)"></td>
+            <td><input type="button" class="boton_acc" value="Del" style="padding-left: 0.6em;" onclick="Borrar()"></td>
+            <td><input type="button" class="boton_acc" value="C" onclick="Eliminar()"></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="boton_sel" value="4" onclick="Display(4)"></td>
+            <td><input type="button" class="boton_sel" value="5" onclick="Display(5)"></td>
+            <td><input type="button" class="boton_sel" value="6" onclick="Display(6)"></td>
+            <td><input type="button" class="boton_acc" value="+" onclick="Display('+')"></td>
+            <td><input type="button" class="boton_acc" value="-" onclick="Display('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="boton_sel" value="7" onclick="Display(7)"></td>
+            <td><input type="button" class="boton_sel" value="8" onclick="Display(8)"></td>
+            <td><input type="button" class="boton_sel" value="9" onclick="Display(9)"></td>
+            <td><input type="button" class="boton_acc" value="*" onclick="Display('*')"></td>
+            <td><input type="button" class="boton_acc" value="/" onclick="Display('/')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="boton_sel" value="." style="padding-left: 1.2em; padding-right: 1.15em;" onclick="Display('.')"></td>
+            <td><input type="button" class="boton_sel" value="0" onclick="Display(0)"></td>
+            <td><input type="button" class="boton_dsp" value="..." id="Desplegable" style="padding-bottom: 0.8em; padding-top: 0.3em;" onclick="Desplegar()"></td>
+            <td colspan="2"><input type="button" class="boton_acc" value="=" style="width: 155px;" onclick="Calcular()"></td>
+        </tr>
+    </table>
+    <div id="Extra" style="display:none;">
+        <table>
+            <tr>
+                <td><input type="button" class="boton_acc" value="(" style="width: 70px;" onclick="Display('(')"></td>
+                <td><input type="button" class="boton_acc" value=")" style="width: 70px;" onclick="Display(')')"></td>
+                <td><input type="button" class="boton_acc" value="sin" style="padding-left: 0.4em; padding-right: 0.4em;" onclick="Display('sin(')"></td>
+                <td><input type="button" class="boton_acc" value="cos" style="padding-left: 0.4em; padding-right: 0.4em;" onclick="Display('cos(')"></td>
+                <td><input type="button" class="boton_acc" value="tan" style="padding-left: 0.4em; padding-right: 0.4em;" onclick="Display('tan(')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="boton_acc" value="^" style="width: 70px;" onclick="Display('^(')"></td>
+                <td><input type="button" class="boton_acc" value="√" style="width: 70px;" onclick="Display('√(')"></td>
+                <td><input type="button" class="boton_acc" value="π" style="width: 75px;" onclick="Display('π')"></td>
+                <!-- <td><input type="button" class="boton_acc" value="rad/º" style="padding-left: 0.4em; padding-right: 0.4em;" onclick="ToggleAng()"></td>
+                <td><input type="button" class="boton_acc" value="cos" style="padding-left: 0.4em; padding-right: 0.4em;" onclick="Display('cos(')"></td> -->
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
